@@ -1,0 +1,339 @@
+/* Layout for App.jsx's outer <div>: a column that's at least the full
+   viewport height, so the footer sits at the bottom even on short pages. */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* flex: 1 makes the main content area grow to fill leftover space,
+   pushing the footer down instead of leaving a gap above it. */
+.app__main {
+  flex: 1;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--ink);
+  color: var(--sand);
+}
+
+.navbar__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: var(--sand);
+}
+
+.navbar__links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: rgba(246, 241, 228, 0.7);
+  font-size: 0.95rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.navbar__link--active {
+  color: var(--sand);
+  border-bottom-color: var(--gold);
+}
+
+/* Hero */
+.hero {
+  background: var(--ink);
+  color: var(--sand);
+  padding: 4rem 1.5rem 4.5rem;
+}
+
+.hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero__kicker {
+  color: var(--gold);
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+}
+
+.hero__title {
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hero__meta {
+  color: rgba(246, 241, 228, 0.75);
+  margin-bottom: 1.25rem;
+}
+
+.hero__desc {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(246, 241, 228, 0.9);
+  margin-bottom: 2rem;
+  max-width: 60ch;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+}
+
+.button--coral {
+  background: var(--coral);
+  color: var(--sand);
+}
+
+/* Section layout */
+.section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+.section--narrow {
+  max-width: 640px;
+}
+
+.section--intro {
+  border-top: 1px solid var(--line);
+}
+
+.section__title {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-title {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+  color: rgba(20, 23, 31, 0.65);
+  margin-bottom: 2rem;
+}
+
+.intro__text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 65ch;
+}
+
+/* Preview list (Home) */
+.preview-list__row {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.preview-list__date {
+  color: var(--gold);
+  font-family: var(--font-display);
+  font-weight: 600;
+  min-width: 70px;
+}
+
+.preview-list__body {
+  flex: 1;
+}
+
+.preview-list__name {
+  font-weight: 500;
+}
+
+.preview-list__location {
+  color: rgba(20, 23, 31, 0.6);
+  font-size: 0.9rem;
+}
+
+.preview-list__category {
+  color: var(--teal);
+  font-size: 0.85rem;
+}
+
+/* Filters (Events) */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.filters__button {
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--ink);
+}
+
+.filters__button--active {
+  background: var(--ink);
+  color: var(--sand);
+  border-color: var(--ink);
+}
+
+/* Event list */
+.event-list__row {
+  display: flex;
+  gap: 1.75rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.event-list__date {
+  min-width: 90px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--gold);
+  font-size: 1.05rem;
+}
+
+.event-list__body {
+  flex: 1;
+}
+
+.event-list__name {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.event-list__location {
+  color: rgba(20, 23, 31, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.event-list__description {
+  line-height: 1.6;
+  max-width: 55ch;
+}
+
+.event-list__category {
+  color: var(--teal);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+/* About */
+.about__lead {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.pull-quote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  color: var(--coral);
+  border-left: 3px solid var(--coral);
+  padding-left: 1.25rem;
+  margin: 0 0 2rem;
+}
+
+.about__text {
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+/* Contact form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form__label {
+  font-size: 0.85rem;
+  color: rgba(20, 23, 31, 0.7);
+  margin-top: 1rem;
+}
+
+.form__input {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  background: white;
+}
+
+.form__input--area {
+  resize: vertical;
+}
+
+.form .button {
+  margin-top: 1.5rem;
+  align-self: flex-start;
+}
+
+.form-success {
+  font-size: 1.1rem;
+  color: var(--teal);
+}
+
+/* Footer */
+.footer {
+  background: var(--ink);
+  color: rgba(246, 241, 228, 0.6);
+}
+
+.footer__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.footer__brand {
+  font-family: var(--font-display);
+  color: var(--sand);
+  margin-bottom: 0.25rem;
+}
+
+.footer__note {
+  font-size: 0.85rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar__inner {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .event-list__row,
+  .preview-list__row {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}

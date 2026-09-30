@@ -1,0 +1,31 @@
+<!--
+  This is the ONE real HTML page in the app. Everything you see when
+  navigating between Home / Events / About / Contact is React swapping
+  content in and out of <div id="root"> below — the browser never actually
+  loads a new .html file. That's what "single-page app" means, and it's why
+  React Router (not normal <a href> links) handles the navigation.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghana Events — Find what's happening</title>
+
+    <!-- Google Fonts: Fraunces (headings) + Work Sans (body text). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- React takes over this empty div and renders the whole app inside it. -->
+    <div id="root"></div>
+
+    <!-- Vite's entry point. type="module" lets the browser use ES import/export
+         syntax directly; Vite rewrites this during npm run build. -->
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

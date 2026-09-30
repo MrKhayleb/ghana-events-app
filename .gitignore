@@ -1,0 +1,12 @@
+# Installed packages — huge, and rebuilt from package.json via `npm install`.
+# Never commit this.
+node_modules
+
+# Production build output from `npm run build`. Regenerated on demand.
+dist
+
+# Environment variables / secrets — keep these out of Git entirely.
+.env
+
+# macOS Finder metadata file.
+.DS_Store

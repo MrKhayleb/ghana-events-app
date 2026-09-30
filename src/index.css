@@ -1,0 +1,58 @@
+/* Global styles + design tokens (CSS custom properties). Defining colors
+   and fonts once here, as --variables, means every component's CSS
+   (App.css) can reuse them instead of repeating hex codes everywhere —
+   change a color here and it updates across the whole app. */
+:root {
+  --ink: #14171f;
+  --sand: #f6f1e4;
+  --gold: #e2a640;
+  --coral: #d9502f;
+  --teal: #1f6f58;
+  --line: rgba(20, 23, 31, 0.12);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--sand);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
